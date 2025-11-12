@@ -1,0 +1,35 @@
+<mat-toolbar [ngClass]="{'halloween': esHalloween}">
+  <button class ="opcion1" matIconButton aria-hidden="false" aria-label="Example home icon" fontIcon="home" [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/contador">Contador</button>
+      <button mat-menu-item routerLink="/mata-topos">Matatopos</button>
+      <button mat-menu-item routerLink="/carrera">Carrera</button>
+      <button mat-menu-item routerLink="/eyeCandy">Eye Candy</button>
+      <button mat-menu-item routerLink="/kanban">kanban</button>
+      <button mat-menu-item routerLink="/formularioRegistro">Formulario Registro</button>
+      <button mat-menu-item routerLink="/formularioHalloween">Fiesta de Hawelin</button>      
+</mat-menu>
+<span class="example-spacer"></span>
+  <span class="example-spacer"></span>
+  <span class="opcion opcion2" routerLink="/contador">Contador</span>
+  <span class="example-spacer"></span>
+  <span  class="opcion opcion2" routerLink="/mata-topos">Matatopos</span>
+  <span class="example-spacer"></span>
+  <span class="opcion opcion2" routerLink="/carrera">Carrera</span>
+  <span class="example-spacer"></span>
+  <span class="opcion opcion2" routerLink="/kanban">Kanban</span>
+  <span class="example-spacer"></span>
+  <span class="opcion opcion2" routerLink="/eyeCandy">Eye Candy</span>
+  <span class="example-spacer"></span>    
+  <span class="opcion opcion2" routerLink="/formularioRegistro">Formulario</span>
+  <span class="example-spacer"></span>    
+  <span class="opcion opcion2" routerLink="/formularioHalloween" >Formularion Halloween</span>
+  <span class="example-spacer"></span>
+
+  <span class="">{{nombre}}</span>
+  <span class="opcion" (click)="cambiarHalloween()"><mat-slide-toggle [(ngModel)]="esHalloween"></mat-slide-toggle></span>
+</mat-toolbar>
+
+

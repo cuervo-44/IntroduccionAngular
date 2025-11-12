@@ -1,0 +1,17 @@
+<form [formGroup]="formulario" (ngSubmit)="mostrar()">
+    <label for="nombre">Nombre:</label>
+    <input id="nombre" formControlName="nombre">
+
+    <label for="email">email:</label>
+    <input id="email" formControlName="email">
+
+    <label for="tipoInvitado">Tipo de invitado:</label>
+    <select id="tipoInvitado" formControlName="tipoInvitado">
+    <option *ngFor="let tipoInvitado of invitados" [value]="tipoInvitado.valor">
+      
+    </option>
+    </select>
+
+
+
+</form>

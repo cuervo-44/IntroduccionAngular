@@ -1,0 +1,41 @@
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+
+@Component({
+  selector: 'app-formulario-halloween',
+  imports: [ReactiveFormsModule],
+  templateUrl: './formulario-halloween.html',
+  styleUrl: './formulario-halloween.css'
+})
+export class FormularioHalloween {
+
+  formulario: FormGroup;
+
+  invitados = [
+    { nombre: 'Opción 1', valor: 'opcion1' },
+    { nombre: 'Opción 2', valor: 'opcion2' },
+    { nombre: 'Opción 3', valor: 'opcion3' }
+
+  ]
+
+  constructor(private fb: FormBuilder) {
+     this.formulario = this.fb.group({
+    nombre: ['', [Validators.required, Validators.minLength(3)]],
+    email: ['', [, Validators.required, Validators.email]],
+    tipoInvitado: ['', Validators.required],
+    disfraz: ['',Validators.required ],
+    fechaLlegada: ['', Validators.required ],
+    aceptaReglas: ['', ]
+    });
+  }
+
+
+  mostrar() {
+    if (this.formulario.invalid) {
+      console.log("Estu mete miedo")
+    
+    }else {
+      console.log(this.formulario.value);
+    }
+  }
+}  

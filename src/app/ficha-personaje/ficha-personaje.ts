@@ -1,0 +1,13 @@
+import { Component, Input } from '@angular/core';
+
+type NewType = undefined;
+
+@Component({
+  selector: 'app-ficha-personaje',
+  imports: [],
+  templateUrl: './ficha-personaje.html',
+  styleUrl: './ficha-personaje.css'
+})
+export class FichaPersonaje {
+@Input() character: string|undefined;
+}
