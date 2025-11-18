@@ -5,13 +5,15 @@
     <label for="email">email:</label>
     <input id="email" formControlName="email">
 
-    <label for="tipoInvitado">Tipo de invitado:</label>
-    <select id="tipoInvitado" formControlName="tipoInvitado">
-    <option *ngFor="let tipoInvitado of invitados" [value]="tipoInvitado.valor">
-      
-    </option>
-    </select>
+    <label for="edad">edad:</label>
+    <input id="edad" formControlName="edad">
 
+    <mat-form-field>
+        <mat-label>Select</mat-label>
 
-
+        <mat-select formControlName="pais">
+            <mat-option value="one">España</mat-option>
+            <mat-option value="two">Portugal</mat-option>
+        </mat-select>
+</mat-form-field>
 </form>

@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
 
 @Component({
   selector: 'app-formulario-halloween',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, MatFormFieldModule, MatSelectModule],
   templateUrl: './formulario-halloween.html',
   styleUrl: './formulario-halloween.css'
 })
@@ -22,10 +24,10 @@ export class FormularioHalloween {
      this.formulario = this.fb.group({
     nombre: ['', [Validators.required, Validators.minLength(3)]],
     email: ['', [, Validators.required, Validators.email]],
-    tipoInvitado: ['', Validators.required],
-    disfraz: ['',Validators.required ],
-    fechaLlegada: ['', Validators.required ],
-    aceptaReglas: ['', ]
+    edad: ['', Validators.required],
+    pais: ['',Validators.required ],
+    aceptaCondiciones: ['', ],
+    comentario: ['', ]
     });
   }
 
