@@ -1,19 +1,37 @@
 <form [formGroup]="formulario" (ngSubmit)="mostrar()">
-    <label for="nombre">Nombre:</label>
-    <input id="nombre" formControlName="nombre">
-
-    <label for="email">email:</label>
-    <input id="email" formControlName="email">
-
-    <label for="edad">edad:</label>
-    <input id="edad" formControlName="edad">
+    <mat-form-field>
+        <mat-label>Nombre</mat-label>
+         <input matInput id="nombre" formControlName="nombre">
+    </mat-form-field>
 
     <mat-form-field>
-        <mat-label>Select</mat-label>
+        <mat-label>Email</mat-label>
+         <input matInput id="email" formControlName="email" type="email">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>edad</mat-label>
+         <input matInput id="edad" formControlName="edad" type="number">
+    </mat-form-field>
+
+
+    <mat-form-field>
+        <mat-label>Pais</mat-label>
 
         <mat-select formControlName="pais">
-            <mat-option value="one">España</mat-option>
-            <mat-option value="two">Portugal</mat-option>
+            <mat-option value="España">España</mat-option>
+            <mat-option value="Portugal">Portugal</mat-option>
+            <mat-option value="Francia">Francia</mat-option>
+            <mat-option value="Suazilandia">Suazilandia</mat-option>
         </mat-select>
-</mat-form-field>
+    </mat-form-field>
+
+    <mat-checkbox formControlName="aceptaCondiciones">Acepto las condiciones y términos del servicio</mat-checkbox>
+
+    <mat-form-field>
+        <mat-label>Mensaje</mat-label>
+        <textarea matInput></textarea>
+    </mat-form-field>
+
+    <button type="submit">Enviar</button>
 </form>
