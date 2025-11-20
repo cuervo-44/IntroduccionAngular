@@ -4,6 +4,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { LocalStorage } from '../services/local-storage';
 
 @Component({
   selector: 'app-formulario-halloween',
@@ -15,31 +16,39 @@ export class FormularioHalloween {
 
   formulario: FormGroup;
 
-  invitados = [
-    { nombre: 'Opción 1', valor: 'opcion1' },
-    { nombre: 'Opción 2', valor: 'opcion2' },
-    { nombre: 'Opción 3', valor: 'opcion3' }
 
-  ]
-
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private almacenamiento: LocalStorage) {
      this.formulario = this.fb.group({
-    nombre: ['', [Validators.required, Validators.minLength(3)]],
-    email: ['', [, Validators.required, Validators.email]],
+    nombre: ['', [Validators.required]],
+    email: ['', [Validators.required, Validators.email]],
     edad: ['', Validators.required],
     pais: ['',Validators.required ],
-    aceptaCondiciones: ['', ],
-    comentario: ['', ]
+    aceptaCondiciones: [false ],
+    comentario: ['',]
     });
   }
 
 
   mostrar() {
     if (this.formulario.invalid) {
-      console.log("Estu mete miedo")
+      console.log("el campo no es válido")
     
     }else {
-      console.log(this.formulario.value);
+      const datos = this.formulario.value;
+      this.almacenamiento.setItem('formularioHalloween', JSON.stringify(datos));
+      console.log("Datos guardados:", datos);
+      this.formulario.reset();
     }
+  }
+
+  reset() {
+     this.formulario.reset({
+      nombre: '',
+      email: '',
+      edad:'',
+      pais:'',
+      aceptaCondiciones:false,
+      comentario:''
+    });
   }
 }  
