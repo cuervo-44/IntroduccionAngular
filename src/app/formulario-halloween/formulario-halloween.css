@@ -23,6 +23,11 @@ button[type="submit"] {
   font-weight: 500;
 }
 
+.mensajeError {
+  color: red;
+}
+
+
 
 
 

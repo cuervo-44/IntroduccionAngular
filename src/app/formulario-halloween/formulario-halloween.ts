@@ -23,7 +23,7 @@ export class FormularioHalloween {
     email: ['', [Validators.required, Validators.email]],
     edad: ['', Validators.required],
     pais: ['',Validators.required ],
-    aceptaCondiciones: [false ],
+    aceptaCondiciones: [false],
     comentario: ['',]
     });
   }
