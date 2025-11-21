@@ -24,7 +24,7 @@ button[type="submit"] {
 }
 
 .mensajeError {
-  color: red;
+  color: rgba(194, 7, 7, 0.74);
 }
 
 

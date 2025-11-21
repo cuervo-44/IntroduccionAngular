@@ -8,16 +8,39 @@ import { Personaje } from '../models/Personaje.model';
   templateUrl: './lista-personajes.html',
   styleUrl: './lista-personajes.css'
 })
-export class ListaPersonajes implements OnInit {
-  personajes: Personaje[] = [
-    {nombre:"Armin Tanzarian", imagen: '/images/anubis.png', raza: "Viet-Kong", poder: "mucho"},
-    {nombre:"sdas", imagen: "sdf", raza: "dasdas", poder: "dasdhfjkjk"},
-    {nombre:"sdas", imagen: "sdf", raza: "dasdas", poder: "dasdhfjkjk"},
-    {nombre:"sdas", imagen: "sdf", raza: "dasdas", poder: "dasdhfjkjk"}  
+export class ListaPersonajes {
+   personajes = [
+    {
+      nombre: "Aragorn",
+      raza: "Humano",
+      poder: 4,
+      imagen: "https://i.imgur.com/UM2WQQg.jpeg"
+    },
+    {
+      nombre: "Legolas",
+      raza: "Elfo",
+      poder: 5,
+      imagen: "https://i.imgur.com/K9b9P6t.jpeg"
+    },
+    {
+      nombre: "Gimli",
+      raza: "Enano",
+      poder: 3,
+      imagen: "https://i.imgur.com/YpIbHjE.jpeg"
+    },
+    {
+      nombre: "Gandalf",
+      raza: "Mago",
+      poder: 5,
+      imagen: "https://i.imgur.com/PSq4csM.jpeg"
+    },
+    {
+      nombre: "Frodo",
+      raza: "Hobbit",
+      poder: 2,
+      imagen: "https://i.imgur.com/MwoQYtW.jpeg"
+    }
   ];
-  ngOnInit(): void {
-
-  }
 
 }
 

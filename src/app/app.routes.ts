@@ -16,5 +16,6 @@ export const routes: Routes = [
     { path: 'ListaPersonajes', component: ListaPersonajes},
     { path: 'formularioRegistro', component: FormularioRegistro},
     { path: 'formularioHalloween', component: FormularioHalloween},
-    {path: 'kanban', component: Kanban}
+    { path: 'kanban', component: Kanban}
+
 ];
