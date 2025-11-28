@@ -13,7 +13,7 @@ export const routes: Routes = [
     { path: 'mata-topos', component: Matatopos},
     { path: 'carrera', component: Carrera},
     { path: 'eyeCandy', component: EyeCandy},
-    { path: 'ListaPersonajes', component: ListaPersonajes},
+    { path: 'lista-personajes', component: ListaPersonajes},
     { path: 'formularioRegistro', component: FormularioRegistro},
     { path: 'formularioHalloween', component: FormularioHalloween},
     { path: 'kanban', component: Kanban}
