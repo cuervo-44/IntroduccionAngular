@@ -1,4 +1,4 @@
-export interface Upgrade {
+export interface Mejora {
     nombre: string;
     coste: number;
     contador: number;
